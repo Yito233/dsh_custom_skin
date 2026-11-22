@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Custom skin">
+  <defs>
+    <linearGradient id="cs-sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="0.55" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="cs-land" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0F172A" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0.72"/>
+    </linearGradient>
+    <clipPath id="cs-frame">
+      <rect x="4" y="4" width="120" height="120" rx="28"/>
+    </clipPath>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#cs-sky)"/>
+  <g clip-path="url(#cs-frame)">
+    <circle cx="91" cy="41" r="12" fill="#FDE68A" opacity="0.95"/>
+    <path d="M4 86 L36 52 L60 76 L82 54 L124 86 L124 128 L4 128 Z" fill="url(#cs-land)"/>
+    <path d="M4 104 L28 84 L48 100 L70 86 L124 104 L124 128 L4 128 Z" fill="#0F172A" opacity="0.35"/>
+  </g>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="2"/>
+</svg>

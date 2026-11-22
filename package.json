@@ -1,0 +1,55 @@
+{
+  "name": "@local/custom-skin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Use a local image, GIF, or video as the DeepSeek Harness application background, with live preview and adjustments.",
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "theme",
+    "skin",
+    "background"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "assets",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/selftest.mjs && node scripts/harness.mjs",
+    "samples": "python scripts/make-samples.py",
+    "package": "node scripts/package.mjs",
+    "check": "node scripts/selftest.mjs && node scripts/harness.mjs && node scripts/build.mjs --check"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}

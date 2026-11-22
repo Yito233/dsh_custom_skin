@@ -1,0 +1,3 @@
+- insert:
+    - id: custom-skin
+      name: '@local/custom-skin'

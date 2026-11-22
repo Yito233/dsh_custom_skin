@@ -1,0 +1,30 @@
+{
+  "name": "@local/skin-sample-theme",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A tiny third-party theme used to verify the custom-skin plugin's installed-skins list.",
+  "license": "MIT",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}
